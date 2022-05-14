@@ -28,7 +28,15 @@ data for the given text.
 # Running tests
 
 To run the tests for this app, first install all the requirements in the `requirements.txt` 
-file with the following code in your terminal. (This assumes you have python3.6+ installed)
+file with the following code in your terminal. (This assumes you have virtualenv installed) Run the following;
+
+### Create a virtual environment
+
+`virtualenv venv -p python3.6`
+
+`source venv/bin/activate`
+
+### Install the requirements
 
 `pip install -r requirements.txt`
 
