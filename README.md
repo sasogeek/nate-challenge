@@ -7,7 +7,7 @@ If you do not already have it installed, [get docker](https://docs.docker.com/ge
 
 Run the following in order, in your terminal.
 
-`docker build nate-docker .`
+`docker build --tag nate-docker .`
 
 `docker run -d -p 3000:5000`
 
