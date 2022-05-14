@@ -1,0 +1,32 @@
+<html>
+    <body>
+        <input id="text">
+        <select id="order">
+            <option value="">Select how to sort result</option>
+            <option value="alpha">Alphabetical sort</option>
+            <option value="count">Count</option>
+        </select>
+        <button onclick="nate()">Get results</button><br><br>
+
+        <div id="results"></div>
+    </body>
+</html>
+
+<script>
+    function nate () {
+        fetch("/word_count", {
+            method: 'POST',
+            headers: {
+                Accept: 'application/json',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "text": document.getElementById('text').value,
+                "order": document.getElementById('order').value,
+            })
+        }).then((res)=>res.json()).then((result)=>{
+            document.getElementById('results').innerHTML = result['res']
+            //document.getElementById('text').value = ''
+        })
+    }
+</script>
