@@ -21,10 +21,8 @@ def word_count():
         text = processor.Text(data.get('text'))
         if data.get('order') == 'alpha':
             sort = text.sorted_wbc_alphabetically()
-            print(sort)
         elif data.get('order') == 'count':
             sort = text.sorted_wbc_by_count()
-            print(sort)
         else:
             sort = text.words_by_count
         html = '<br>' + '<br>'.join([str(i) + ':' + str(sort[i]) for i in sort])
