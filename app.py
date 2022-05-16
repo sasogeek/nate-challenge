@@ -13,9 +13,9 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/word_count', methods=['GET', 'POST'])
+@app.route('/health', methods=['GET', 'POST'])
 @cross_origin()
-def word_count():
+def health():
     if request.method == 'POST':
         data = json.loads(request.data.decode('utf8')) or {}
         text = processor.Text(data.get('text'))
