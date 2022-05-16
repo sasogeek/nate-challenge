@@ -9,7 +9,7 @@ Run the following in order, in your terminal.
 
 `docker build --tag nate-docker .`
 
-`docker run -d -p 3000:5000 nate-docker`
+`docker run -d -p 3005:5000 nate-docker`
 
 Now going to http://localhost:5000 will open up the app.
 
